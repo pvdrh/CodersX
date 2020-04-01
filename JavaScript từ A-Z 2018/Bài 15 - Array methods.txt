@@ -1,3 +1,12 @@
+Các method của 1 array
+1. a.concat(b): nối mảng b vào sau mảng a và trả về 1 mảng mới đã nối nhưng không thay đổi a và b
+2. a.push(b): Thêm b vào cuối mảng a và trả về số lượng phần tử của mảng mới và thay đổi mảng a ban đầu
+3. a.pop(): trả về phần tử cuối cùng của a bị đẩy ra và thay đổi mảng a
+4. a.shift(): trả về phần tử đầu tiên của a bị đẩy ra và thay đổi mảng a
+5. a.unshift(5): thêm 5 vào đầu của mảng a và thay đổi mảng a, trả về độ dài mới của mảng
+6. a.slice([begin,end): trả về 1 mảng mới có chỉ số bắt đầu từ begin và kết thúc là end. Không thay đổi mảng a ban đầu
+7. a.splice(begin,end): thêm, sửa, xóa phần tử của mảng ban đầu
+
 Bài 1
 /*
 	Viết 1 chương trình xóa đi n phần tử cuối cùng của 1 array
