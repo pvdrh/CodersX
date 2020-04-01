@@ -1,0 +1,89 @@
+for..of trả về value của phần tử for..in trả về key của phần tử
+
+Bài 2
+/**
+ * Sử dụng vòng lặp for...of để tính tích của các phần tử trong một array gồm các số
+ */
+var arr = [];
+
+function multiply(arr) {
+  // Write code here...
+  var multi = 1
+  for (var item of arr) {
+    multi = multi * item;
+  }
+  return multi;
+}
+multiply(arr);
+
+Bài 3
+/**
+ * Sử dụng vòng lặp for...in để lấy về tất cả các key của object sau, 
+ * in ra cả các key của các nested object (object con lồng bên trong object lớn)
+ * Gợi ý: đây là bài tập khó, bạn nên tìm hiểu về recursive trước
+ */
+var apartment = {
+  bedroom: {
+    area: 20,
+    bed: {
+      type: 'twin-bed',
+      price: 100
+    }
+  }
+};
+var _try = true;
+
+function getObjectKey(obj, keys) {
+  // Write code here...
+  if (_try) {
+    var temp = [];
+    keys = temp;
+    _try = false;
+  }
+  for (var x in obj) {
+    keys.push(x);
+    if (typeof obj[x] == 'object') {
+      getObjectKey(obj[x], keys);
+    }
+  }
+  return keys;
+}
+
+Bài 4
+/**
+ * viết hàm has để kiểm tra xem object có tồn tại 1 key xác định hay không
+ * Tham số:
+ *  - object: object cần kiểm tra
+ *  - key: key cần kiểm tra xem có tồn tại trong object không
+ * Return:
+ *  - true nếu có tồn tại
+ *  - false nếu không tồn tại
+ */
+function has(object, key) {
+  for (var i in object) {
+    if (i == key) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+Bài 5
+/**
+ * Giả thiết: numbers là một array các số nguyên
+ * Yêu cầu: 
+ * - trả về tổng các số, dùng vòng lặp for ... of
+ * - nếu array trống trả về 0
+ */
+var numbers = [];
+
+function sum(numbers) {
+  // Write code here...
+  var tong = 0;
+  for (var item of numbers) {
+    tong = tong + item;
+  }
+  return tong;
+}
+sum(numbers);

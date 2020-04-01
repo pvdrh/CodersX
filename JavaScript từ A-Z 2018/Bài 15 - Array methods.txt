@@ -1,0 +1,37 @@
+Bài 1
+/*
+	Viết 1 chương trình xóa đi n phần tử cuối cùng của 1 array
+*/
+function removeEnd(arr, n) {
+  // your code here!
+  for (var i = 0; i < n; i++) {
+    arr.pop();
+  }
+  return arr;
+}
+
+Bài 2
+/**
+ * Đọc và dịch các method đã học từ MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+ * Lấy ví dụ cho các trường hợp input khác nhau của mỗi method
+ * Mục đích của bài tập này: Giúp bạn học cách tự tra cứu, đọc tài liệu.
+ * Đây là một kĩ năng không thể thiếu của 1 developer.
+ */
+// var a = [1, 5, 8, 3];
+// var b = [13, 52, 85, 37];
+
+// 1. a.slice([begin,end): trả về 1 mảng mới có chỉ số bắt đầu từ begin và kết thúc là end. Không thay đổi mảng a ban đầu
+// ex: a.concat(0,2) => 1, 5, 8 
+
+// 2.  a.splice(begin,end): thêm, sửa, xóa phần tử của mảng ban đầu
+// ex: b.splice(0,1) => b = [13, 52];
+
+Bài 3
+/** 
+ * Viết function trả về n phần tử đầu tiên có trong mảng.
+ */
+function first(arr, n) {
+  // your code here...
+  return arr.splice(0, n);
+}
+// console.log(first([1, 2, 3], 2)); // expect [1, 2]
